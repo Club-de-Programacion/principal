@@ -1,0 +1,31 @@
+{
+    "engines": {
+        "vscode": "^1.94.0"
+    },
+    "name": "fastmarkdown",
+    "displayName": "FastMarkDown",
+    "description": "FastMarkDown is a custom language designed to enhance your coding experience in Markdown, enabling faster and more efficient writing with syntax highlighting and standardized formatting.",
+    "version": "2.3.1",
+    "publisher": "Alejandro_Vaz",
+    "contributes": {
+        "languages": [{
+            "id": "fmd",
+            "extensions": [".fmd"],
+            "aliases": ["FastMarkDown"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fmd",
+            "scopeName": "source.fmd",
+            "path": "./syntaxes/fastmarkdown.tmLanguage.json"
+        }],
+        "keywords": [
+            "markdown",
+            "fastmarkdown",
+            "syntax highlighting",
+            "programming",
+            "editor"
+        ]
+    },
+    "license": "MIT"
+}

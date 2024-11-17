@@ -1,0 +1,185 @@
+{
+    "scopeName": "source.fmd",
+    "patterns": [
+        {
+            "name": "fmd.bold.fmd",
+            "begin": "'",
+            "patterns": [
+                { "include": "#italic" },
+                { "include": "#strikethrough" },
+                { "include": "#superscript" },
+                { "include": "#subscript" }
+            ],
+            "end": "'"
+        },
+        {
+            "name": "fmd.italic.fmd",
+            "begin": "//",
+            "patterns": [
+                { "include": "#bold" },
+                { "include": "#strikethrough" },
+                { "include": "#superscript" },
+                { "include": "#subscript" }
+            ],
+            "end": "//"
+        },
+        {
+            "name": "fmd.strikethrough.fmd",
+            "begin": "/-",
+            "patterns": [
+                { "include": "#bold" },
+                { "include": "#italic" },
+                { "include": "#superscript" },
+                { "include": "#subscript" }
+            ],
+            "end": "/-"
+        },
+        {
+            "name": "fmd.subscript.fmd",
+            "match": "/s"
+        },
+        {
+            "name": "fmd.superscript.fmd",
+            "match": "/S"
+        },
+        {
+            "name": "fmd.python.fmd",
+            "begin": "/python",
+            "end": "/exit"
+        },
+        {
+            "name": "fmd.new.fmd",
+            "match": "/n"
+        },
+        {
+            "name": "fmd.comment.fmd",
+            "begin": "#>>>",
+            "end": "<<<#"
+        },
+        {
+            "name": "fmd.ipy.fmd",
+            "begin": "/ipy",
+            "end": "/ipy"
+        },
+        {
+            "name": "fmd.h1.fmd",
+            "begin": "/h1",
+            "patterns": [
+                { "include": "#newline" }
+            ],
+            "end": "$"
+        },
+        {
+            "name": "fmd.h2.fmd",
+            "begin": "/h2",
+            "patterns": [
+                { "include": "#newline" }
+            ],
+            "end": "$"
+        },
+        {
+            "name": "fmd.h3.fmd",
+            "begin": "/h3",
+            "patterns": [
+                { "include": "#newline" }
+            ],
+            "end": "$"
+        },
+        {
+            "name": "fmd.img.fmd",
+            "match": "/img"
+        },
+        {
+            "name": "fmd.def.fmd",
+            "begin": "/def",
+            "patterns": [
+                { "include": "#newline" },
+                { "include": "#subscript" },
+                { "include": "#superscript" },
+                { "include": "#imath" },
+                { "include": "#bold" },
+                { "include": "#italic" },
+                { "include": "#strikethrough" },
+                { "include": "#ipy" }
+            ],
+            "end": "$"
+        },
+        {
+            "name": "fmd.void.fmd",
+            "match": "/void"
+        },
+        {
+            "name": "fmd.done.fmd",
+            "match": "/done"
+        },
+        {
+            "name": "fmd.numbered.fmd",
+            "match": "    /"
+        },
+        {
+            "name": "fmd.pointed.fmd",
+            "match": "    ."
+        },
+        {
+            "name": "fmd.brochet.fmd",
+            "match": "[\\(\\)\\[\\]\\{\\}]"
+        },
+        {
+            "name": "fmd.imath.fmd",
+            "begin": "/_",
+            "patterns": [
+                { "include": "#superscript" },
+                { "include": "#subscript" }
+            ],
+            "end": "/_"
+        },
+        {
+            "name": "fmd.math.fmd",
+            "begin": "/__",
+            "patterns": [
+                { "include": "#superscript" },
+                { "include": "#subscript" }
+            ],
+            "end": "/__"
+        }
+    ],
+    "repository": {
+        "ipy": {
+            "name": "fmd.ipy.fmd",
+            "begin": "/ipy",
+            "end": "/ipy"
+        },
+        "imath": {
+            "name": "fmd.imath.fmd",
+            "begin": "/_",
+            "end": "/_"
+        },
+        "superscript": {
+            "name": "fmd.superscript.fmd",
+            "match": "/S"
+        },
+        "subscript": {
+            "name": "fmd.subscript.fmd",
+            "match": "/s"
+        },
+        "bold": {
+            "name": "fmd.bold.fmd",
+            "begin": "'",
+            "end": "'"
+        },
+        "italic": {
+            "name": "fmd.italic.fmd",
+            "begin": "//",
+            "end": "//"
+        },
+        "strikethrough": {
+            "name": "fmd.strikethrough.fmd",
+            "begin": "/-",
+            "end": "/-"
+        },
+        "newline": {
+            "name": "fmd.new.fmd",
+            "match": "/n"
+        }
+    }
+}
