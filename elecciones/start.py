@@ -56,7 +56,7 @@ def ask(question, color):
         return input(question)
 
 
-os.chdir(f"{"J:\\VSC\\Club de Programación\\main\\elecciones"}")
+os.chdir(f"{"D:\\VSC\\CP-principal\\elecciones"}")
 option_path = "options.json"
 
 people_path = "people.json"
